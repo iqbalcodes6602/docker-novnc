@@ -9,7 +9,8 @@ RUN apk add --no-cache sudo git bash python3 tigervnc xorg-server xf86-video-dum
     && echo alpine:alpine | chpasswd \
     && echo 'alpine ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
     && git clone https://github.com/novnc/noVNC /opt/noVNC \
-    && git clone https://github.com/novnc/websockify /opt/noVNC/utils/websockify
+    && git clone https://github.com/novnc/websockify /opt/noVNC/utils/websockify \
+    && ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
 
 # Switch to root to copy entry.sh and set permissions
 USER root
