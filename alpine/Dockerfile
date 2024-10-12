@@ -5,9 +5,10 @@ LABEL maintainer="Don <novaspirit@novaspirit.com>"
 RUN apk add --no-cache sudo git xfce4 faenza-icon-theme bash python3 tigervnc xfce4-terminal \
     && adduser -h /home/alpine -s /bin/bash -S -D alpine && echo -e "alpine\nalpine" | passwd alpine \
     && echo 'alpine ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
-    && git clone https://github.com/novnc/noVNC /opt/noVNC \
+    # && git clone https://github.com/novnc/noVNC /opt/noVNC \
+    && git clone https://github.com/iqbalcodes6602/noVNC /opt/noVNC \
     && git clone https://github.com/novnc/websockify /opt/noVNC/utils/websockify \
-    && ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
+    && ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html
 
 USER alpine
 WORKDIR /home/alpine
