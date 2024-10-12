@@ -8,7 +8,7 @@ RUN apk add --no-cache sudo git xfce4 faenza-icon-theme bash python3 tigervnc xf
     # && git clone https://github.com/novnc/noVNC /opt/noVNC \
     && git clone https://github.com/iqbalcodes6602/noVNC /opt/noVNC \
     && git clone https://github.com/novnc/websockify /opt/noVNC/utils/websockify \
-    && ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html
+    && ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
 
 USER alpine
 WORKDIR /home/alpine

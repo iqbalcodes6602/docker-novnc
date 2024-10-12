@@ -8,7 +8,7 @@ docker build -t alpine-xfce4 .
 #### Run Image
 
 ```sh
-docker run -it -p 6080:6080 --name alpine-novnc alpine-xfce4
+docker run -it -p 6080:6080 --name fire firefox
 ```
 
 #### Connect With noVNC

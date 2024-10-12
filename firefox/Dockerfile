@@ -11,7 +11,7 @@ RUN apk add --no-cache sudo git bash python3 tigervnc xorg-server xf86-video-dum
     # && git clone https://github.com/novnc/noVNC /opt/noVNC \
     && git clone https://github.com/iqbalcodes6602/noVNC /opt/noVNC \
     && git clone https://github.com/novnc/websockify /opt/noVNC/utils/websockify \
-    && ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html
+    && ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
 
 # Switch to root to copy entry.sh and set permissions
 USER root
