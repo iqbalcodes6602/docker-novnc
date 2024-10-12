@@ -7,16 +7,20 @@ Xvfb :99 &
 export DISPLAY=:99
 
 # Start the VNC server on display :99
-vncserver :99  &
+vncserver :99 &
 
 # Start Openbox as the window manager
 openbox &
 
-# Start Firefox
-firefox &
-
 # Start noVNC to proxy the VNC connection to the web
 /opt/noVNC/utils/novnc_proxy --vnc 127.0.0.1:5999 --listen 6080 &
 
-# Keep the script running
-wait
+# Function to start Firefox and restart it if it exits
+while true; do
+    echo "Starting Firefox..."
+    firefox &
+    FIREFOX_PID=$!
+    wait $FIREFOX_PID
+    echo "Firefox exited. Restarting in 3 seconds..."
+    sleep 3
+done
