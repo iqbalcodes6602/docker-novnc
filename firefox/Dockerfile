@@ -1,6 +1,5 @@
 FROM alpine:latest
 
-LABEL maintainer="Don <novaspirit@novaspirit.com>"
 
 # Install necessary packages including Firefox and Openbox
 RUN apk add --no-cache sudo git bash python3 tigervnc xorg-server xf86-video-dummy \

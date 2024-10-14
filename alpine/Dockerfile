@@ -1,6 +1,5 @@
 FROM alpine:latest
 
-LABEL maintainer="Don <novaspirit@novaspirit.com>"
 
 RUN apk add --no-cache sudo git xfce4 faenza-icon-theme bash python3 tigervnc xfce4-terminal \
     && adduser -h /home/alpine -s /bin/bash -S -D alpine && echo -e "alpine\nalpine" | passwd alpine \
