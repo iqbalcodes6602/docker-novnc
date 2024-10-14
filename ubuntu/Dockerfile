@@ -1,6 +1,5 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="YourName <your.email@example.com>"
 
 # Pre-configure environment variables for locale and timezone to avoid interactive prompts
 ENV DEBIAN_FRONTEND=noninteractive \
